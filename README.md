@@ -1,4 +1,4 @@
-# 2131v2-Manual
+# 2141v2-Manual
 
 Lab manual for Wayne State University's Physics 2141 Introductory Physics Laboratory class.
 
