@@ -70,4 +70,179 @@ In other words, how is the voltage across the membrane at a distance $x$ related
 Before we collect data and perform a quantitative analysis of your model, let us think qualitatively about some of the features of your model of passive transport.
 \par 
 We want to understand how the voltage across the membrane depends on the distance along the axon.
-Each segment in you multi-segment model circuit 
+Each segment in you multi-segment model circuit should include a resistor representing the membrane, so the voltages across these resistors represents $V_{mem}$ at eachsegment.
+The first $R_{mem}$ corresponds to segment 1, the second to segment 2, and so on. 
+Let's notate these voltages as $V_{mem}^{1}$, $V_{mem}^{2}$, and so on.
+Similarly, let's call the voltages across the axon segments $V_{axon}^{1}$, $V_{axon}^{2}$, and so on; the currents in the axon segments are $I_{axon}^{1}$, $I_{axon}^{2}$, and so on.
+\par 
+\textbf{Applying the loop rule} to the first segment, find in terms of the applied membrane potential $V_{0}$, the current in the first axon segment $I_{axon}^{1}$, and the membrane resistance $R_{axon}$.
+Do the same for the second segment, finding $V_{mem}^{2}$ in terms of the applied membrane potential $V_{0}$, the axon currents, and the resistance $R_{axon}$.
+\emph{Is $V_{mem}^{2}$ less than, equal to, or greater than $V_{mem}^{1}$? How do you know?}
+Do the same for the third segment, finding $V_{mem}^{3}$ in terms of the applied membrane potential, the currents in the segment, and the axon resistance.
+With $n$ indicating the segment number, does $V_{mem}^{n}$ increase or decrease as $n$ increases?
+Does $I_{axon}^{n}$ increase or decrease as $n$ increases? 
+On your circuit diagram, draw arrows of different widths (or lengths) by each axon resistor to indicate the amount of current in the axon segment.
+\par 
+From your analysis, it should be clear that $V_{mem}$ decreases as you go further and further from the start of the axon.
+Can we be more specific?
+If we create a mathematical model for $V_{mem}(x)$ as a function of $x$, where x is the distance from the start of the axon, what functional form would we expect?
+As a reminder, common possibilities include:
+\begin{enumerate}
+\itemsep0em
+\item linear with a negative slope (rate of change is constant)
+\item inverse (product is constant)
+\item exponential decay (percent change is constant)
+\end{enumerate}
+It should help to consider the behavior of $V_{mem}(x)$ in the limiting cases.
+Examine the behavior of your model circuit.
+As $x$ approaches $0$, what happens to $V_{mem}(x)$?
+As $x$ becomes very large, what happens to $V_{mem}(x)$?
+Compare with the behavior of each of the possible functional forms.
+Make your best guess for the functional form and sketch the corresponding graph of $V_{mem}(x)$ vs. $x$.
+Explain your reasoning.
+
+\section*{Part 3: Quantitative Analysis of Your Model}
+We are now ready to build and test your passive transport circuit model.
+\par 
+Equipment:
+\begin{itemize}
+	\itemsep-0.2em
+	\item circuit board
+	\item connecting wires
+	\item alligator clips
+	\item battery 
+	\item switch
+	\item assorted resistors (10 each of three different kinds)
+	\item voltage probe
+	\item LabPro
+	\item computer and LoggerPro software
+\end{itemize}
+The circuit board (also known as a ``breadboard'') is probably new to you and requires a short explanation.
+Down the edges of the board are two columns of holes surrounded by a red and a blue line.
+Leave the negative end of the battery connected to the blue line; this is your extra-cellular fluid and all of these holes are connected together in this column (connected inside the circuit board).
+The other parts of the circuit board are much wider sets of columns.
+For these, the holes in a column are NOT connected, but the holes in a row ARE connected.
+If this is not clear enough for you, please ask your TA to explain.
+You will need to think carefully about how you can fit your model of passive transport in a nerve axon onto this circuit board.
+You have two circuit boards so that you can begin building a second model with spare resistors once you are ready to test the first model.
+\par 
+\textbf{Construct your model circuit with ten segments} using the provided components.
+Choose resistors with the proper ratio of resistance values that you found in the previous part, and make sure that you use the same value value of resistance for all of the $R_{mem}$ and a different constant value for all of the $R_{axon}$.
+Don't forget to close the switch to take data and open it when you finish.
+\par 
+\textbf{Measure and record} $V_{mem}$ vs. $x$ for $x = 0 \, mm$ to $x = 10 \, mm$.
+(In your circuit, each axon resistor corresponds to a 1 mm segment, so for your measurements, x is the segment number.
+At $x=0$, $V_{mem}(x)=V_{0}$.)
+To record voltages in LoggerPro:
+\begin{itemize}
+\itemsep-0.2em
+\item Click on the Data Collection icon, and change the mode to ``Events with Entry.'' Provide appropriate name and units. Click `Done'.
+\item Press the start button.
+\item Use the voltage probe to measure voltages by attaching the probe leads to the circuit on either side of each $R_{mem}$. To store voltage values in a table, click on `Keep Current Value'. You can enter the corresponding length value in the same row of the table. Don't forget to collect the $x=0$ value $V_{0}$!
+\item If a Data Erase box appears, click on `Append to Latest Data' and proceed.
+\item Press the stop button when finished with all 11 data points.
+\item To display data points without connecting lines, double click on the graphed data, and unselect the option for connecting the data points.
+\end{itemize}
+Now let's \textbf{interpret your results}.
+Following the same line of reasoning you used in your qualitative analysis to find $V_{mem}^{n}$, and assuming that the segment is only a different length $dx$ long, it is possible to derive a differential equation for $V_{mem}(x)$ - don't do this, just know that it is possible!
+Solving the differential equation gives us an equation describing how the voltage across the membrane depends on the distance $x$ from the end where a voltage $V_{0}$ is applied.
+The equation is then:
+\[ V_{mem}(x) = V_{0} e^{-x/\lambda} \quad \textrm{with} \quad \lambda =\alpha \sqrt{\frac{R_{mem}}{R_{axon}}}  \]
+where $\lambda$ (Greek letter lambda, called the length constant of the axon) is the distance along the axon at which $V_{mem}(x)$ has decreased by a factor of $e$ (the natural logarithm base e), to $0.37 V_{0}$, and $\alpha$ is a proportionality constant with units of length that is specific to different types of axons.
+\par 
+To perform a fit:
+\begin{itemize}
+\itemsep-0.2em
+\item Click `Analyze'.
+\item From the drop-down menu select `curve fit'.
+\item From the pop-up menu select the appropriate function for exponential decay.
+\item Click `Try Fit'.
+\item If it is the correct fit click `Ok'.
+\end{itemize}
+Provide the graph of your data with your best fit function in your lab write-up.
+Calculate the length constant of your model circuit from your best fit function.
+What does this length constant tell you about the feasibility of passive transport as a signal transmission method?
+Will your brain ever be informed of an injury to your toe?
+Given the length constant you have determined, how many `lengths' are there in the nerve connecting your toe to the base of your spine?
+What fraction of the original potential difference ($V_{0}$ at your toe) remains by the time the signal reaches the spine?
+\par 
+Build two new model circuits with two different length constants and find these length constants with a few measurements (you don't have to measure as many data points if you choose them wisely; include the graphs for these two circuits in your report).
+(\textbf{\emph{Hint:}} You have three different sets of resistors. 
+How many ways can you pair them up to build a circuit? 
+What ways have you already used?)
+How does the length constant change as the ratio of $R_{mem}$ to $R_{axon}$ changes?
+To get a signal from your toe to reach the base of your spine using passive transport, \textbf{what would the ratio of the resistance need to be}?
+State your assumptions.
+
+\newpage
+
+\section*{Part 4: What adaptations allows the action potential to travel faster?}
+How fast does an action potential travel along an axon?
+You're probably aware that it's finite - no one has truly instant reflexes.
+Yet, your model circuit suggests that the process is nearly instantaneous.
+Something is missing from the model.
+We need to extend our model in order to understand \emph{why} it takes time for an action potential to travel along an axon.
+\par 
+Let's take a closer look at the membrane of an axon.
+[See figure 5 below.]
+The channels are the paths through which ions flow (with some resistance).
+The equivalent resistance of all of these parallel channels in a single segment is $R_{mem}$.
+Now take away those channels and what do you have left?
+An insulating layer with conducting fluids on each side.
+That should remind you of a familiar device - a capacitor.
+The membrane is therefore properly viewed as a resistor and a capacitor in parallel.
+[See figure 6 below.]
+As current travels along the axon and enters each new segment, charge also accumulates on the capacitor.
+It takes a significant amount of time for a capacitor to charge and thus also for the potential difference across the membrane to reach its final destination.
+We refer to the time it takes the membrane potential difference to reach 63\% of its final value as the time constant $\tau$.
+It can be shown that $\tau = R_{mem}C_{mem}$, where $R_{mem}$ is the resistance and $C_{mem}$ is the capacitance of a segment of membrane.
+It takes several time constants for the membrane potential difference to reach the values that your model resistor circuit gives.
+
+\subsection*{Speed depends on time constant and length constant}
+The speed at which an action potential travels down an axon depends primarily on two things:
+\begin{itemize}
+\itemsep-0.2em
+\item \textbf{It's \emph{inversely proportional} to the time constant:} The longer it takes the membrane potential difference to rise in each segment, the slower the action potential will travel. The time constant is given by $\tau = R_{mem}C_{mem}$.
+\item \textbf{It's \emph{proportional} to the length constant:} The greater the length constant, the farther the depolarizing potential difference reaches down the axon without regeneration, bringing successive segments to the threshold potential difference required to regenerate the action potential sooner. You measured the length constant of your model circuit in Part 3. In general, the length constant $\lambda$ is proportional to $\sqrt{R_{mem}/R_{axon}}$. This makes sense: If the membrane resistance is really big (or if the axon resistance is really small), current mostly flows \emph{down} the axon, with just a little flowing across the membrane in each successive segment.
+\end{itemize}
+\par 
+It makes sense that faster propagation of nerve impulses confers an advantage to an organism.
+In the next few questions, we'll \textbf{examine the physics behind some adaptations leading to speedier action potentials}.
+
+\newpage
+
+\subsection*{How does making the axon wider affect the speed?}
+Let's say the diameter of the axon is increased by a factor of $f$. [figure 7]
+\begin{enumerate}
+\itemsep-0.2em
+\item By what factor does $R_{axon}$ change? (Note: The resistivity of the axoplasm is constant, as is the 1 mm length of an axon segment.)
+\item By what factor does $R_{mem}$ change? (Note: The resistivity of the membrane is constant, as is the 1 nm thickness of the membrane.)
+\item By what factor does the length constant $\lambda$ change?
+\item Assuming that the time constant doesn't change, by what factor does the speed therefore change?
+\item By what factor would the diameter of the axon have to change to increase the speed by a factor of 10?
+\end{enumerate}
+Note: The `wider axon adaptation' is the strategy adopted by the squid, whose `giant' axons allow very rapid travel of its action potentials, making it a master of the quick escape.
+
+\subsection*{What about making the membrane thicker?}
+Wider axons work fine for a squid, but are highly impractical for organisms with lots of neurons like humans.
+(If each of your neurons were the size of a squid's, your head wouldn't fit through a doorway!)
+Let's explore another possible way of increasing the length constant and therefore the speed: increasing $R_{mem}$.
+This is a strategy commonly adopted by vertebrates.
+It's achieved by extra insulation (a myelin sheath) that's wrapped around the axon. [Figure 8]
+\begin{enumerate}
+\itemsep-0.2em
+\item Let's say that myelination increases the membrane resistance by a factor of 1000. By what factor does the length constant increase? Why?
+\item Assuming that the time constant doesn't change, by what factor do the speed therefore change? Why?
+\item Based on the analysis you did in part 3, could a myelinated axon use passive transport as the signal transmission method? Why or why not?
+\item There are many diseases that affect signal transmission along neural pathways. These include multiple sclerosis (MS), myasthenia gravis, and amyotrophic lateral sclerosis (ALS or `Lou Gehrig's Disease'). Often, a component of these afflictions is a malformation or degeneration of the myelin sheath. MS is a demyelinating disease, which means that the axons of neurons are intact but the myelin sheaths are damaged. Why would loss or damage to the myelin sheath be a problem for signal transmission, even if the axon was intact?
+\end{enumerate}
+Note: Myelinationobstructs the membrane's voltage-gated Na$^{+}$ channels that enable the action potential to be regenerated.
+For this reason, there are gaps in the myelin coating, called the nodes of Ranvier, where the channels are not obstructed.
+From what you've learned in this lab, what do you suppose determines the maximum distance between these gaps?
+
+\section*{For your report:}
+As stated previously, the \textbf{lab write-up} should include (a) your explanations of the models you made, (b) the supported conclusions you drew from analyses of your models, and (c) your discussion of advanced topics related to the basic ideas yoiu are exploring.
+To be more specific, you should discuss the work you have done and the considerations you have made in modeling passive transport, qualitatively and quantitatively analyzing your model, and modeling adaptations that can increase the speed of signal transfer.
+If you want to include hand-drawn elements (such as model circuit diagrams), please do so.
+Don't forget to include the plots of $V_{mem}(x)$ vs. $x$ with the appropriate fitting functions. 
+\underline{Respond explicitly} to all passages marked with an exclamation point (!).
