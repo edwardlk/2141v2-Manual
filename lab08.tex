@@ -2,9 +2,28 @@
 \thispagestyle{fancy}
 \fancyhead[RE,LO]{Experiment \thechapter}
 %
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-20pt}  
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{neural_nets}
+  \end{center}
+  \caption{Inside a cell wall.}
+  \label{fig:neural_net}
+  \vspace{-20pt}
+\end{wrapfigure}
 Nerve impulses travel in our bodies as electrical signals. 
 Whether its seeing or hearing something, controlling a muscle, or just thinking, the transmission process along a nerve cell, or neuron, is the same: a sufficient stimulus received by the cell body (soma) initiates a change in the potential difference across the membrane, or action potential, which travels along the axon to be transferred through a synapse to the other neurons or muscle cells. 
-\par
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-20pt}  
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{neuron}
+  \end{center}
+  \caption{Inside a cell wall.}
+  \label{fig:neuron}
+  \vspace{-20pt}
+\end{wrapfigure}
+
 A single axon can be a meter or more long, like those connecting our toes to our spinal cords, so action potentials must travel a long way.
 You may have learned in a biology course that for an action potential to be transmitted from one end of an axon to another, it must be regenerated repeatedly along its length.
 We call this active transport and it is accomplished by voltage-gated ion channels, as discussed in the appendix to this lab.
@@ -117,7 +136,7 @@ Equipment:
 	\item LabPro
 	\item computer and LoggerPro software
 \end{itemize}
-The circuit board (also known as a ``breadboard'') is probably new to you and requires a short explanation.
+The circuit board (also known as a ``breadboard'') is probably new to you and requires a short explanation (see figure~\ref{fig:breadboard}).
 Down the edges of the board are two columns of holes surrounded by a red and a blue line.
 Leave the negative end of the battery connected to the blue line; this is your extra-cellular fluid and all of these holes are connected together in this column (connected inside the circuit board).
 The other parts of the circuit board are much wider sets of columns.
@@ -126,6 +145,14 @@ If this is not clear enough for you, please ask your TA to explain.
 You will need to think carefully about how you can fit your model of passive transport in a nerve axon onto this circuit board.
 You have two circuit boards so that you can begin building a second model with spare resistors once you are ready to test the first model.
 \par 
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=\linewidth]{breadboard-connect.png}
+	\caption{Breadboard connections diagram.}
+	\label{fig:breadboard}
+\end{figure}
+
 \textbf{Construct your model circuit with ten segments} using the provided components.
 Choose resistors with the proper ratio of resistance values that you found in the previous part, and make sure that you use the same value value of resistance for all of the $R_{mem}$ and a different constant value for all of the $R_{axon}$.
 Don't forget to close the switch to take data and open it when you finish.
