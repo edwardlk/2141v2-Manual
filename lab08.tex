@@ -1,29 +1,19 @@
 \chapter{Testing Models of Signal Transmission Along Nerve Axons}
 \thispagestyle{fancy}
 \fancyhead[RE,LO]{Experiment \thechapter}
-%
-\begin{wrapfigure}{r}{0.5\textwidth}
-  \vspace{-20pt}  
+
+\begin{wrapfigure}{r}{0.45\textwidth}
+  \vspace{-25pt}  
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{neural_nets}
+  \includegraphics[width=0.43\textwidth]{neural_nets}
   \end{center}
-  \caption{Inside a cell wall.}
+  \caption{Neurons form networks for information flow.}
   \label{fig:neural_net}
-  \vspace{-20pt}
+  \vspace{-5pt}
 \end{wrapfigure}
 Nerve impulses travel in our bodies as electrical signals. 
-Whether its seeing or hearing something, controlling a muscle, or just thinking, the transmission process along a nerve cell, or neuron, is the same: a sufficient stimulus received by the cell body (soma) initiates a change in the potential difference across the membrane, or action potential, which travels along the axon to be transferred through a synapse to the other neurons or muscle cells. 
-
-\begin{wrapfigure}{r}{0.5\textwidth}
-  \vspace{-20pt}  
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{neuron}
-  \end{center}
-  \caption{Inside a cell wall.}
-  \label{fig:neuron}
-  \vspace{-20pt}
-\end{wrapfigure}
-
+Whether its seeing or hearing something, controlling a muscle, or just thinking, the transmission process along a nerve cell, or neuron, is the same: a sufficient stimulus received by the cell body (\emph{soma}) initiates a change in the potential difference across the membrane, or action potential, which travels along the axon to be transferred through a synapse to the other neurons or muscle cells. 
+[See figures~\ref{fig:neural_net} and \ref{fig:neuron}.]
 A single axon can be a meter or more long, like those connecting our toes to our spinal cords, so action potentials must travel a long way.
 You may have learned in a biology course that for an action potential to be transmitted from one end of an axon to another, it must be regenerated repeatedly along its length.
 We call this active transport and it is accomplished by voltage-gated ion channels, as discussed in the appendix to this lab.
@@ -34,21 +24,45 @@ In this two week lab sequence, transport is a feasible method of signal transmis
 We will also be considering some adaptations to the simple cylinder model of a nerve axon (see below) that can increase the speed of signal transfer – surely a faster response is advantageous to survival in a species!
 
 \subsection*{Simple cylinder model of a nerve axon: structure and properties}
-The structure of the axon is shown schematically in figure 3 below.
-for electrical purposes, an axon is basically a long, thin cylinder of membrane filled with a fluid called axoplasm.
-when no action potential is traveling, the potential difference across the membrane, from the outside of the axon to the inside, is about -70 mV, the resting potential difference.
+\begin{wrapfigure}{R}{0.45\textwidth}
+  \vspace{-25pt}  
+  \begin{center}
+    \includegraphics[width=0.43\textwidth]{neuron}
+  \end{center}
+  \caption{Inside a cell wall.}
+  \label{fig:neuron}
+  \vspace{-5pt}
+\end{wrapfigure}
+The structure of the axon is shown schematically in figure~\ref{fig:axMod1} below.
+For electrical purposes, an axon is basically a long, thin cylinder of membrane filled with a fluid called axoplasm.
+When no action potential is traveling, the potential difference across the membrane, from the outside of the axon to the inside, is about -70 mV, the resting potential difference.
 In part, this is because the concentration of of sodium atoms (Na$^{+}$) is much higher outside the axon than inside.
 \par
-the axoplasm, like all fluids in biological systems, has mobile ions dissolved in it, giving it a moderate conductivity (many orders of magnitude lower than copper or other metals we can think of as ideal conductors).
+The axoplasm, like all fluids in biological systems, has mobile ions dissolved in it, giving it a moderate conductivity (many orders of magnitude lower than copper or other metals we can think of as ideal conductors).
 the fluid outside the membrane, the extra-cellular fluid, is very similar to the axoplasm and thus has approximately the same conductivity.
 \par 
 The lipid bilayer forming the membrane is electrically insulating, with extremely low conductivity, but many different kinds of channel proteins cross the membrane.
 These channels only allow specific ions to pass under particular conditions,
 the channels increase the conductivity of the membrane as a whole, so that although the membrane conductivity is much lower than that of the axoplasm, current does not pass through the membrane.
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=0.4\textwidth]{axonModel1}
+	\caption{Simple cylinder model of an axon.}
+	\label{fig:axMod1}
+\end{figure}
 
 \section*{Part 1: Modeling Passive Transport}
 Our goal is to understand how a potential difference applied across the membrane at one end of the axon spreads along the axon if it is not being regenerated as it travels down the axon.
-thus for the purposes of our model we'll assume there is a battery at the left end of the axon segment (see the figure), holding the potential difference from the outside to the inside at $x=0$ to a positive value we'll call $V_{0}$.
+thus for the purposes of our model we'll assume there is a battery at the left end of the axon segment (see figure~\ref{fig:axMod2}), holding the potential difference from the outside to the inside at $x=0$ to a positive value we'll call $V_{0}$.
+\begin{wrapfigure}{R}{0.45\textwidth}
+  \vspace{-25pt}  
+  \begin{center}
+    \includegraphics[width=0.43\textwidth]{axonModel2}
+  \end{center}
+  \caption{Model of potential difference across axon membrane.}
+  \label{fig:axMod2}
+  \vspace{-5pt}
+\end{wrapfigure}
 \par 
 Suppose there was just a single ion channel (e.g., a `potassium leak channel') crossing through the membrane, at the right end of the segemnt in the figure. 
 Draw a loop onto the diagram showing the path of current flow from the positive side of the battery (inside) to the negative side of the battery (outside), and then draw a simple circuit that corresponds to this pattern of current flow.
@@ -63,10 +77,19 @@ The resistivities of the axoplasm and the extracellular fluid are very similar.
 Considering how the current flows through both the axoplasm and the extra-cellular fluid, explain why the resistance of the current path through the extra-cellular fluid is much smaller than the resistance of the current path through the exoplasm - thus we cannot treat the extra-cellular fluid as just a conducting wire.
 \par 
 A long axon can be modeled as a chain of many short segments like the segments like the segment described above.
-The dashed lines in figure 4 visually divide the axon into five such segments.
+The dashed lines in figure~\ref{fig:axMod3} visually divide the axon into five such segments.
 sketch the path of current flow onto the diagram and then design a circuit model for it.
 Check your model with your instructor.
 \par 
+\begin{wrapfigure}{R}{0.45\textwidth}
+  \vspace{-15pt}  
+  \begin{center}
+    \includegraphics[width=0.43\textwidth]{axonModel3}
+  \end{center}
+  \caption{Axon chain of many segments.}
+  \label{fig:axMod3}
+  \vspace{-5pt}
+\end{wrapfigure}
 To complete the model, we need values for the resistances.
 There are actually many ion channels passing through the membrane, so our circuit model needs to be constructed using the resistance of a segment of membrane rather  than a single ion channel.
 Each segment of membrane consists of many ion channels in parallel, so the overall resistance of the membrane segment is the equivalent resistance of all of those ion channels. 
@@ -74,6 +97,7 @@ The average resistivity of the membrane can be measured and used to find the res
 \par 
 Use the relationship between resistance, resistivity, length, and cross-sectional area to estimate values for the resistance of a membrane segment $R_{mem}$ and an axoplasm segment $R_{axon}$ using the following order-of-magnitude values:
 \begin{itemize}
+\itemsep-0.2em
 \item the diameter of the axon $\sim$ 10 $\mu$m
 \item the membrane thickness $\sim$ 10 nm
 \item the resistivity of the axoplasm $\sim$ 1 $\Omega$-m
@@ -107,7 +131,7 @@ Can we be more specific?
 If we create a mathematical model for $V_{mem}(x)$ as a function of $x$, where x is the distance from the start of the axon, what functional form would we expect?
 As a reminder, common possibilities include:
 \begin{enumerate}
-\itemsep0em
+\itemsep-0.2em
 \item linear with a negative slope (rate of change is constant)
 \item inverse (product is constant)
 \item exponential decay (percent change is constant)
@@ -224,6 +248,13 @@ It takes a significant amount of time for a capacitor to charge and thus also fo
 We refer to the time it takes the membrane potential difference to reach 63\% of its final value as the time constant $\tau$.
 It can be shown that $\tau = R_{mem}C_{mem}$, where $R_{mem}$ is the resistance and $C_{mem}$ is the capacitance of a segment of membrane.
 It takes several time constants for the membrane potential difference to reach the values that your model resistor circuit gives.
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.5\textwidth]{membraneRC}
+\caption{(A) magnified view of a membrane. (B) RC circuit model of a membrane.}
+\label{fig:memRC}
+\end{figure}
+
 
 \subsection*{Speed depends on time constant and length constant}
 The speed at which an action potential travels down an axon depends primarily on two things:
@@ -235,8 +266,6 @@ The speed at which an action potential travels down an axon depends primarily on
 \par 
 It makes sense that faster propagation of nerve impulses confers an advantage to an organism.
 In the next few questions, we'll \textbf{examine the physics behind some adaptations leading to speedier action potentials}.
-
-\newpage
 
 \subsection*{How does making the axon wider affect the speed?}
 Let's say the diameter of the axon is increased by a factor of $f$. [figure 7]
@@ -263,7 +292,7 @@ It's achieved by extra insulation (a myelin sheath) that's wrapped around the ax
 \item Based on the analysis you did in part 3, could a myelinated axon use passive transport as the signal transmission method? Why or why not?
 \item There are many diseases that affect signal transmission along neural pathways. These include multiple sclerosis (MS), myasthenia gravis, and amyotrophic lateral sclerosis (ALS or `Lou Gehrig's Disease'). Often, a component of these afflictions is a malformation or degeneration of the myelin sheath. MS is a demyelinating disease, which means that the axons of neurons are intact but the myelin sheaths are damaged. Why would loss or damage to the myelin sheath be a problem for signal transmission, even if the axon was intact?
 \end{enumerate}
-Note: Myelinationobstructs the membrane's voltage-gated Na$^{+}$ channels that enable the action potential to be regenerated.
+Note: Myelination obstructs the membrane's voltage-gated Na$^{+}$ channels that enable the action potential to be regenerated.
 For this reason, there are gaps in the myelin coating, called the nodes of Ranvier, where the channels are not obstructed.
 From what you've learned in this lab, what do you suppose determines the maximum distance between these gaps?
 

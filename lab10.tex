@@ -2,6 +2,15 @@
 \thispagestyle{fancy}
 \fancyhead[RE,LO]{Experiment \thechapter}
 %
+\begin{wrapfigure}{R}{0.50\textwidth}
+  \vspace{-25pt}  
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{emSpectrum}
+  \end{center}
+  \caption{The electromagnetic spectrum.}
+  \label{fig:emSpec}
+  \vspace{-5pt}
+\end{wrapfigure}
 In this two-week lab, we will be exploring the interaction of light with matter. 
 Using spectroscopy (also called spectral analysis, spectrometry, or spectrophotometry), we will examine emission and absorption of light by various substances. 
 Spectroscopes (also called spectrometers and spectrophotometers) are measurement tools designed to distinguish different colors of light. 
@@ -23,13 +32,32 @@ Since light can only be absorbed or emitted in these packets, the way different 
 Doing a spectral analysis of light emitted or absorbed by something can give us a lot of information about it. 
 Stokes (famous for his study of viscosity) was the first to show that hemoglobin was the molecule responsible for carrying oxygen in the blood—he did this using spectral analysis! 
 On an entirely different physical scale, it's spectral analysis that permits us to figure out the composition of stars. 
-\par 
-Your lab will consist of three parts: I) exploring the quantized atom; II) exploring emission and absorption; and III) considering the evolutionary adaptation of the visible spectrum of the human eye. 
+
+\subsection*{A Short Introduction to Light/Quantization:}
+The range of all possible light waves is referred to as the Electromagnetic (EM) Spectrum (see figure~\ref{fig:emSpec}). 
+Of this range, the 'visible' portion (sensed by the human eye, ~ 400nm - 700nm) is only a very small section. 
+These waves move at a speed of $c = 3.0 \times 10^{8} \: m/s$ in a vacuum. 
+Their frequency, $f$, and wavelength, $\lambda$, are related with their speed, $v$, according to: $v = f \lambda$. 
+The energy, $E$, carried by these waves is proportional to their frequency: $E = h f$, where the proportionality constant, $h$, is Planck's constant ($h = 6.63 \times 10^{-34} \; kg \, m^{2}/s$). 
+\par
+All of these different waves are produced by electric charges moving, oscillating, and resonating in very specific ways. 
+For each resonant frequency producing a photon of light there is an associated packet of energy, called a quantum. 
+Because all light is made of these packets, these quanta, we say that light is quantized.
+
+\paragraph{For this two week lab:} Your overall task for the next two weeks is Your lab will consist of three parts: I) exploring the quantized atom; II) exploring emission and absorption; and III) considering the evolutionary adaptation of the visible spectrum of the human eye. 
 The lab report you turn in at the end of the second week should discuss answers to questions posed in the sections below as well as any insights you gain from your explorations and investigations, along with the data supporting those insights.
+You will do this in multiple stages:
+\begin{enumerate}
+\itemsep-0.2em
+\item Get familiar with the optical equipment. Make sure that the lenses are clean, if they are not, ask your TA for help cleaning them.
+\item Determine the focal lengths of your lenses.
+\item Explore how the focal length of a lens interacts with the image distance and object distance when the total length from object to image is fixed.
+\end{enumerate}
 
 \section*{About the Equipment:}
 Each group has access to:
 \begin{itemize}
+\itemsep-0.3em
 \item a spectrometer and fiber optic cable that can interface with the computer via the USB,
 \item Logger Pro software for the computer,
 \item a small stand with multiple 90-clamps,
@@ -51,16 +79,6 @@ The Na and Hg lamps will need to warm-up before they produce a usable spectrum.
 Masking the light ray box will help reduce glare from reflections (ask your TA/LA for help with this). 
 You may find it helpful to use the fiber optic sensor in conjunction with a fixed holder/mount.
 
-\section*{A Short Introduction to Light/Quantization:}
-The range of all possible light waves is referred to as the Electromagnetic (EM) Spectrum (see figure at right). 
-Of this range, the 'visible' portion (sensed by the human eye, ~ 400nm - 700nm) is only a very small section. 
-These waves move at a speed of c = 3.0·108 m/s in a vacuum. 
-Their frequency, f, and wavelength, $\lambda$, are related with their speed, v, according to: v = f$\lambda$. 
-The energy, E, carried by these waves is proportional to their frequency: E=hf, where the proportionality constant, h, is Planck's constant (h = 6.63·10-34 kg·m2/s). 
-\par
-All of these different waves are produced by electric charges moving, oscillating, and resonating in very specific ways. 
-For each resonant frequency producing a photon of light there is an associated packet of energy, called a quantum. 
-Because all light is made of these packets, these quanta, we say that light is quantized.
 
 \section*{Part I: Exploring the Quantized Atom}
 Perhaps the most 'illuminating' model of the quantization of light is the Bohr model of the hydrogen (H) atom. 
@@ -70,12 +88,12 @@ The electron will then transition back to a lower energy state, emitting this en
 The Bohr model is a good model for explaining why only certain frequencies/wavelengths of light are absorbed or emitted by an atom. 
 It also explains the Rydberg formula for the emission lines of the hydrogen spectrum—this formula was well-established experimentally as early as 1888, but had no theoretical explanation until the Bohr model was introduced in 1913 (25 years later!). 
 Some of the energy level transitions within the hydrogen atom have been given specific names. 
-All transitions to/from the ground state (lowest energy level, n = 1) are part of the Lyman series. 
-All transitions to/from the 1st excited stated (n = 2) are part of the Balmer series. 
-All transitions to/from the 2nd excited state (n = 3) are part of the Paschen series. 
+All transitions to/from the ground state (lowest energy level, $n = 1$) are part of the Lyman series. 
+All transitions to/from the 1st excited stated ($n = 2$) are part of the Balmer series. 
+All transitions to/from the 2nd excited state ($n = 3$) are part of the Paschen series. 
 Other transitions also have formal names, but the Lyman, Balmer, and Paschen are the most commonly encountered. 
-Each level (each n) has an associated energy given by: En=(-13.606 eV)/(n2). 
-(Recall that 1 Joule = 6.2415·1018 eV.) 
+Each level (each $n$) has an associated energy given by: $E_{n}=(-13.606 eV)/(n^{2})$. 
+(Recall that 1 Joule $= 6.2415 \times 10^{18} eV$.) 
 Below are three charts showing the energy levels for the Bohr model of the hydrogen atom and the associated energy level transitions. 
 How are these similar? 
 How are they different? 
@@ -114,6 +132,7 @@ There is a lot of different equipment involved in these investigations, so let's
 Remember to take notes on the observations and insights you gain from your investigations. 
 To aid you in this exploration, you might consider the following questions (these are suggested, but not mandated):
 \begin{itemize}
+\itemsep-0.3em
 \item How do the various filters change the spectrum produced by the hydrogen lamp?
 \item What does a ‘red’ filter do?
 \item How are the spectra produced by the sodium (Na) or mercury (Hg) lamps similar to and different from that produced by the hydrogen (H) lamp?
