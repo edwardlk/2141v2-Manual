@@ -9,41 +9,51 @@
   \end{center}
   \caption{Neurons form networks for information flow.}
   \label{fig:neural_net}
-  \vspace{-5pt}
+  \vspace{45pt}
+  \begin{center}
+  \includegraphics[width=0.43\textwidth]{neuron2}
+  \end{center}
+  \caption{Information flow through neurons.}
+  \label{fig:neuron}
+  \vspace{0pt}
 \end{wrapfigure}
+
 Nerve impulses travel in our bodies as electrical signals. 
-Whether its seeing or hearing something, controlling a muscle, or just thinking, the transmission process along a nerve cell, or neuron, is the same: a sufficient stimulus received by the cell body (\emph{soma}) initiates a change in the potential difference across the membrane, or action potential, which travels along the axon to be transferred through a synapse to the other neurons or muscle cells. 
-[See figures~\ref{fig:neural_net} and \ref{fig:neuron}.]
+Whether its seeing or hearing something, controlling a muscle, or just thinking, the transmission process along a nerve cell, or neuron, is the same: a sufficient stimulus received by the cell body (\emph{soma}) initiates a change in the potential difference across the membrane, or \emph{action potential}, which travels along the axon to be transferred through a synapse to the other neurons or muscle cells. 
+[See figures~\ref{fig:neural_net} and \ref{fig:neuron}]
 A single axon can be a meter or more long, like those connecting our toes to our spinal cords, so action potentials must travel a long way.
 You may have learned in a biology course that for an action potential to be transmitted from one end of an axon to another, it must be regenerated repeatedly along its length.
-We call this active transport and it is accomplished by voltage-gated ion channels, as discussed in the appendix to this lab.
+We call this \emph{active transport} and it is accomplished by voltage-gated ion channels, as discussed in the appendix to this lab.
 Why is active transport necessary?
 Couldn't we simply apply a potential difference to the end of a nerve axon and expect that signal to travel along the axon to its final destination, the spinal cord and then the brain?
-This alternate type of signal transmission is called passive transport. 
-In this two week lab sequence, transport is a feasible method of signal transmission. 
-We will also be considering some adaptations to the simple cylinder model of a nerve axon (see below) that can increase the speed of signal transfer – surely a faster response is advantageous to survival in a species!
+This alternate type of signal transmission is called \emph{passive transport}. 
+In this two week lab sequence, we will be \textbf{modeling passive transport} in nerve axons and \textbf{testing our model} to determine if passive transport is a feasible method of signal transmission. 
+We will also be \textbf{considering some adaptations} to the simple cylinder model of a nerve axon that can increase the speed of signal transfer – surely a faster response is advantageous to survival in a species!
 
 \subsection*{Simple cylinder model of a nerve axon: structure and properties}
-\begin{wrapfigure}{R}{0.45\textwidth}
-  \vspace{-25pt}  
-  \begin{center}
-    \includegraphics[width=0.43\textwidth]{neuron}
-  \end{center}
-  \caption{Inside a cell wall.}
-  \label{fig:neuron}
-  \vspace{-5pt}
-\end{wrapfigure}
+
+%\begin{wrapfigure}{R}{0.45\textwidth}
+%  \vspace{-25pt}  
+%  \begin{center}
+%    \includegraphics[width=0.43\textwidth]{neuron}
+%  \end{center}
+%  \caption{Inside a cell wall.}
+%  \label{fig:neuron}
+%  \vspace{-5pt}
+%\end{wrapfigure}
+
 The structure of the axon is shown schematically in figure~\ref{fig:axMod1} below.
 For electrical purposes, an axon is basically a long, thin cylinder of membrane filled with a fluid called axoplasm.
-When no action potential is traveling, the potential difference across the membrane, from the outside of the axon to the inside, is about -70 mV, the resting potential difference.
+When no action potential is traveling, the potential difference across the membrane, from the outside of the axon to the inside, is about -70 mV, the \emph{resting} potential difference.
 In part, this is because the concentration of of sodium atoms (Na$^{+}$) is much higher outside the axon than inside.
 \par
 The axoplasm, like all fluids in biological systems, has mobile ions dissolved in it, giving it a moderate conductivity (many orders of magnitude lower than copper or other metals we can think of as ideal conductors).
-the fluid outside the membrane, the extra-cellular fluid, is very similar to the axoplasm and thus has approximately the same conductivity.
+The fluid outside the membrane, the \emph{extracellular fluid}, is very similar to the axoplasm and thus has approximately the same conductivity.
 \par 
 The lipid bilayer forming the membrane is electrically insulating, with extremely low conductivity, but many different kinds of channel proteins cross the membrane.
 These channels only allow specific ions to pass under particular conditions,
-the channels increase the conductivity of the membrane as a whole, so that although the membrane conductivity is much lower than that of the axoplasm, current does not pass through the membrane.
+The channels increase the conductivity of the membrane as a whole, so that although the membrane conductivity is much lower than that of the axoplasm, current \textbf{does pass} through the membrane.
+
 \begin{figure}[hbtp]
 	\centering
 	\includegraphics[width=0.4\textwidth]{axonModel1}
@@ -54,6 +64,7 @@ the channels increase the conductivity of the membrane as a whole, so that altho
 \section*{Part 1: Modeling Passive Transport}
 Our goal is to understand how a potential difference applied across the membrane at one end of the axon spreads along the axon if it is not being regenerated as it travels down the axon.
 thus for the purposes of our model we'll assume there is a battery at the left end of the axon segment (see figure~\ref{fig:axMod2}), holding the potential difference from the outside to the inside at $x=0$ to a positive value we'll call $V_{0}$.
+
 \begin{wrapfigure}{R}{0.45\textwidth}
   \vspace{-25pt}  
   \begin{center}
@@ -63,24 +74,27 @@ thus for the purposes of our model we'll assume there is a battery at the left e
   \label{fig:axMod2}
   \vspace{-5pt}
 \end{wrapfigure}
+
 \par 
 Suppose there was just a single ion channel (e.g., a `potassium leak channel') crossing through the membrane, at the right end of the segemnt in the figure. 
-Draw a loop onto the diagram showing the path of current flow from the positive side of the battery (inside) to the negative side of the battery (outside), and then draw a simple circuit that corresponds to this pattern of current flow.
-The axoplasm, an ion channel, and the extra-cellular fluid should each be represented separately in your simple circuit.
+\textbf{Draw a loop} onto the diagram showing the path of current flow from the positive side of the battery (inside) to the negative side of the battery (outside), and then \textbf{draw a simple circuit} that corresponds to this pattern of current flow.
+(You may want to include this in the introduction of your lab report)
+The axoplasm, an ion channel, and the extracellular fluid should each be represented separately in your simple circuit.
 \par 
-In fact, the resistance of the current path through the extra-cellular is much less than the resistance of either the axoplasm or the ion channel through the membrane, so the extra-cellular fluid can be represented as just a conducting wire in the simple circuit.
+In fact, the resistance of the current path through the extracellular is much less than the resistance of either the axoplasm or the ion channel through the membrane, so the extracellular fluid can be represented as just a conducting wire in the simple circuit.
 (If you didn't initially do so, update your simple circuit accordingly.) 
 Let's think about why the extracellular fluid will have such low resistance.
 \par 
 Resistance $R$ can be determined from the length $L$, the cross-sectional area $A$, and the resistivity $\rho$ according to $R = \frac{\rho L}{A}$.
 The resistivities of the axoplasm and the extracellular fluid are very similar.
-Considering how the current flows through both the axoplasm and the extra-cellular fluid, explain why the resistance of the current path through the extra-cellular fluid is much smaller than the resistance of the current path through the exoplasm - thus we cannot treat the extra-cellular fluid as just a conducting wire.
+Considering how the current flows through both the axoplasm and the extracellular fluid, \textbf{explain why} the resistance of the current path through the extracellular fluid is much smaller than the resistance of the current path through the exoplasm - thus we can treat the extracellular fluid as just a conducting wire.
 \par 
 A long axon can be modeled as a chain of many short segments like the segments like the segment described above.
 The dashed lines in figure~\ref{fig:axMod3} visually divide the axon into five such segments.
-sketch the path of current flow onto the diagram and then design a circuit model for it.
-Check your model with your instructor.
+Sketch the path of current flow onto the diagram and then \textbf{design a circuit model} for it.
+\textbf{Check your model with your instructor.}
 \par 
+
 \begin{wrapfigure}{R}{0.45\textwidth}
   \vspace{-15pt}  
   \begin{center}
@@ -90,12 +104,13 @@ Check your model with your instructor.
   \label{fig:axMod3}
   \vspace{-5pt}
 \end{wrapfigure}
+
 To complete the model, we need values for the resistances.
 There are actually many ion channels passing through the membrane, so our circuit model needs to be constructed using the resistance of a segment of membrane rather  than a single ion channel.
 Each segment of membrane consists of many ion channels in parallel, so the overall resistance of the membrane segment is the equivalent resistance of all of those ion channels. 
 The average resistivity of the membrane can be measured and used to find the resistance of a segment of membrane.
 \par 
-Use the relationship between resistance, resistivity, length, and cross-sectional area to estimate values for the resistance of a membrane segment $R_{mem}$ and an axoplasm segment $R_{axon}$ using the following order-of-magnitude values:
+Use the relationship between resistance, resistivity, length, and cross-sectional area to \textbf{estimate values for the resistance} of a membrane segment $R_{mem}$ and an axoplasm segment $R_{axon}$ using the following order-of-magnitude values:
 \begin{itemize}
 \itemsep-0.2em
 \item the diameter of the axon $\sim$ 10 $\mu$m
@@ -110,10 +125,10 @@ Also, it turns out that only the ratio $R_{mem}/R_{axon}$ affects how far the po
 \section*{Part 2: Qualitative Analysis of Your Model}
 With the model you have created, we hope to understand how the potential difference across the membrane changes as we examine different distance along the nerve axon.
 In other words, how is the voltage across the membrane at a distance $x$ related to the initial voltage $V_{0}$?
-Before we collect data and perform a quantitative analysis of your model, let us think qualitatively about some of the features of your model of passive transport.
+Before we collect data and perform a quantitative analysis of your model, let us \textbf{think qualitatively about some of the features of your model of passive transport}.
 \par 
 We want to understand how the voltage across the membrane depends on the distance along the axon.
-Each segment in you multi-segment model circuit should include a resistor representing the membrane, so the voltages across these resistors represents $V_{mem}$ at eachsegment.
+Each segment in you multi-segment model circuit should include a resistor representing the membrane, so the voltages across these resistors represents $V_{mem}$ at each segment.
 The first $R_{mem}$ corresponds to segment 1, the second to segment 2, and so on. 
 Let's notate these voltages as $V_{mem}^{1}$, $V_{mem}^{2}$, and so on.
 Similarly, let's call the voltages across the axon segments $V_{axon}^{1}$, $V_{axon}^{2}$, and so on; the currents in the axon segments are $I_{axon}^{1}$, $I_{axon}^{2}$, and so on.
@@ -145,7 +160,7 @@ Make your best guess for the functional form and sketch the corresponding graph 
 Explain your reasoning.
 
 \section*{Part 3: Quantitative Analysis of Your Model}
-We are now ready to build and test your passive transport circuit model.
+You are now ready to build and test your passive transport circuit model.
 \par 
 Equipment:
 \begin{itemize}
@@ -155,14 +170,14 @@ Equipment:
 	\item alligator clips
 	\item battery 
 	\item switch
-	\item assorted resistors (10 each of three different kinds)
+	\item assorted resistors
 	\item voltage probe
 	\item LabPro
 	\item computer and LoggerPro software
 \end{itemize}
 The circuit board (also known as a ``breadboard'') is probably new to you and requires a short explanation (see figure~\ref{fig:breadboard}).
 Down the edges of the board are two columns of holes surrounded by a red and a blue line.
-Leave the negative end of the battery connected to the blue line; this is your extra-cellular fluid and all of these holes are connected together in this column (connected inside the circuit board).
+Leave the negative end of the battery connected to the blue line; this is your extracellular fluid and all of these holes are connected together in this column (connected inside the circuit board).
 The other parts of the circuit board are much wider sets of columns.
 For these, the holes in a column are NOT connected, but the holes in a row ARE connected.
 If this is not clear enough for you, please ask your TA to explain.
@@ -218,9 +233,6 @@ Given the length constant you have determined, how many `lengths' are there in t
 What fraction of the original potential difference ($V_{0}$ at your toe) remains by the time the signal reaches the spine?
 \par 
 Build two new model circuits with two different length constants and find these length constants with a few measurements (you don't have to measure as many data points if you choose them wisely; include the graphs for these two circuits in your report).
-(\textbf{\emph{Hint:}} You have three different sets of resistors. 
-How many ways can you pair them up to build a circuit? 
-What ways have you already used?)
 How does the length constant change as the ratio of $R_{mem}$ to $R_{axon}$ changes?
 To get a signal from your toe to reach the base of your spine using passive transport, \textbf{what would the ratio of the resistance need to be}?
 State your assumptions.
@@ -235,14 +247,14 @@ Something is missing from the model.
 We need to extend our model in order to understand \emph{why} it takes time for an action potential to travel along an axon.
 \par 
 Let's take a closer look at the membrane of an axon.
-[See figure 5 below.]
+[See figure~\ref{fig:memRC}A below.]
 The channels are the paths through which ions flow (with some resistance).
 The equivalent resistance of all of these parallel channels in a single segment is $R_{mem}$.
 Now take away those channels and what do you have left?
 An insulating layer with conducting fluids on each side.
 That should remind you of a familiar device - a capacitor.
 The membrane is therefore properly viewed as a resistor and a capacitor in parallel.
-[See figure 6 below.]
+[See figure~\ref{fig:memRC}B below.]
 As current travels along the axon and enters each new segment, charge also accumulates on the capacitor.
 It takes a significant amount of time for a capacitor to charge and thus also for the potential difference across the membrane to reach its final destination.
 We refer to the time it takes the membrane potential difference to reach 63\% of its final value as the time constant $\tau$.
